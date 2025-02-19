@@ -5,7 +5,7 @@ const equals = document.getElementById('equals')
 const clear = document.getElementById('clear')
 const clear_all = document.getElementById('clear-all')
 let evaluated = false
-const allowed_chars = [1,2,3,4,5,6,7,8,9,0,'+','-','*','/','=','Enter','Backspace']
+const allowed_chars = ['1','2','3','4','5','6','7','8','9','0','+','-','*','/','=','Enter','Backspace']
 
 clear.addEventListener('click', function(){
     input_field.value = input_field.value.slice(0,-1)
