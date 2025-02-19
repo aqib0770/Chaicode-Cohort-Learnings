@@ -1,0 +1,96 @@
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+.parent {
+    display: flex;
+    border: 2px solid white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+    width: 282px;
+    height: 415px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+}
+
+#input-box{
+    margin-bottom: 10px;
+    width: 265px;
+    text-align: right;
+    height: 50px;
+    border: 2px solid black;
+    font-size: large;
+    font-weight: 700;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4,60px);
+    grid-template-rows: repeat(5, 60px);
+    gap: 10px;
+}
+
+#clear {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    background-color: #4A4947;
+    border: 2px solid black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#clear-all {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    background-color: #4A4947;
+    border: 2px solid black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#number, #operator, #equals{
+    border: 2px solid black;
+    background-color: white;
+    font-size: larger;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#equals {
+    background-color: #B17457;
+}
+
+#operator{
+    background-color: #D8D2C2;
+    color: black;
+}
+
+#number:hover {
+    background-color: #4A4947;
+    color: white;
+    font-size: xx-large;
+}
+
+#operator:hover{
+    background-color: #B17457;
+    font-size: xx-large;
+}
+
+#equals:hover {
+    background-color: #4A4947;
+    color: #D8D2C2;
+    font-size: xx-large;
+}
+
+#clear:hover, #clear-all:hover{
+    background-color: #FAF7F0;
+    color: #4A4947;
+    font-size: xx-large;
+}
