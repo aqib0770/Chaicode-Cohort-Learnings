@@ -5,6 +5,7 @@ const equals = document.getElementById('equals')
 const clear = document.getElementById('clear')
 const clear_all = document.getElementById('clear-all')
 let evaluated = false
+const allowed_chars = [1,2,3,4,5,6,7,8,9,0,'+','-','*','/','=','Enter','Backspace']
 
 clear.addEventListener('click', function(){
     input_field.value = input_field.value.slice(0,-1)
@@ -52,6 +53,12 @@ equals.addEventListener('click', function(){
 })
 
 document.addEventListener('keydown', function(event){
+
+    if(!allowed_chars.includes(event.key)){
+        event.preventDefault()
+        return
+    }
+
     if(event.key === 'Enter'){
         if(["+", "-", "*", "/"].includes(input_field.value.slice(-1))){
             return
@@ -76,5 +83,6 @@ document.addEventListener('keydown', function(event){
     else if(input_field.value === "Enter valid expression" || input_field.value === "Infinity"){
         input_field.value = ""
     }
+
 
 })
