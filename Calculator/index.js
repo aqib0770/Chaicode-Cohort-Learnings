@@ -77,6 +77,7 @@ document.addEventListener('keydown', function(event){
         
     }
     else if(event.key === 'Backspace'){
+        event.preventDefault()
         input_field.value = input_field.value.slice(0,-1)
     }
 
